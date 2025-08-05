@@ -1230,83 +1230,610 @@
 // вона повертала об'єкт користувача, пошта якого (властивість email)
 // збігається зі значенням другого параметра email.
 
-const getUserWuthEmail = (users, email) => {
-  return users.find(user => user.email === email);
-};
+// const getUserWuthEmail = (users, email) => {
+//   return users.find(user => user.email === email);
+// };
 
-console.log(
-  getUserWuthEmail(
-    [
-      {
-        name: 'Moore Hensley',
-        email: 'moorehensley@indexia.com',
-        eyeColor: 'blue',
-        friends: ['Sharron Pace'],
-        isActive: false,
-        balance: 2811,
-        gender: 'male',
-      },
-      {
-        name: 'Sharlene Bush',
-        email: 'sharlenebush@tubesys.com',
-        eyeColor: 'blue',
-        friends: ['Briana Decker', 'Sharron Pace'],
-        isActive: true,
-        balance: 3821,
-        gender: 'female',
-      },
-      {
-        name: 'Ross Vazquez',
-        email: 'rossvazquez@xinware.com',
-        eyeColor: 'green',
-        friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-        isActive: false,
-        balance: 3793,
-        gender: 'male',
-      },
-      {
-        name: 'Elma Head',
-        email: 'elmahead@omatom.com',
-        eyeColor: 'green',
-        friends: ['Goldie Gentry', 'Aisha Tran'],
-        isActive: true,
-        balance: 2278,
-        gender: 'female',
-      },
-      {
-        name: 'Carey Barr',
-        email: 'careybarr@nurali.com',
-        eyeColor: 'blue',
-        friends: ['Jordan Sampson', 'Eddie Strong'],
-        isActive: true,
-        balance: 3951,
-        gender: 'male',
-      },
-      {
-        name: 'Blackburn Dotson',
-        email: 'blackburndotson@furnigeer.com',
-        eyeColor: 'brown',
-        friends: ['Jacklyn Lucas', 'Linda Chapman'],
-        isActive: false,
-        balance: 1498,
-        gender: 'male',
-      },
-      {
-        name: 'Sheree Anthony',
-        email: 'shereeanthony@kog.com',
-        eyeColor: 'brown',
-        friends: ['Goldie Gentry', 'Briana Decker'],
-        isActive: true,
-        balance: 2764,
-        gender: 'female',
-      },
-    ],
-    'shereeanthony@kog.com'
-  )
-);
+// console.log(
+//   getUserWuthEmail(
+//     [
+//       {
+//         name: 'Moore Hensley',
+//         email: 'moorehensley@indexia.com',
+//         eyeColor: 'blue',
+//         friends: ['Sharron Pace'],
+//         isActive: false,
+//         balance: 2811,
+//         gender: 'male',
+//       },
+//       {
+//         name: 'Sharlene Bush',
+//         email: 'sharlenebush@tubesys.com',
+//         eyeColor: 'blue',
+//         friends: ['Briana Decker', 'Sharron Pace'],
+//         isActive: true,
+//         balance: 3821,
+//         gender: 'female',
+//       },
+//       {
+//         name: 'Ross Vazquez',
+//         email: 'rossvazquez@xinware.com',
+//         eyeColor: 'green',
+//         friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//         isActive: false,
+//         balance: 3793,
+//         gender: 'male',
+//       },
+//       {
+//         name: 'Elma Head',
+//         email: 'elmahead@omatom.com',
+//         eyeColor: 'green',
+//         friends: ['Goldie Gentry', 'Aisha Tran'],
+//         isActive: true,
+//         balance: 2278,
+//         gender: 'female',
+//       },
+//       {
+//         name: 'Carey Barr',
+//         email: 'careybarr@nurali.com',
+//         eyeColor: 'blue',
+//         friends: ['Jordan Sampson', 'Eddie Strong'],
+//         isActive: true,
+//         balance: 3951,
+//         gender: 'male',
+//       },
+//       {
+//         name: 'Blackburn Dotson',
+//         email: 'blackburndotson@furnigeer.com',
+//         eyeColor: 'brown',
+//         friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//         isActive: false,
+//         balance: 1498,
+//         gender: 'male',
+//       },
+//       {
+//         name: 'Sheree Anthony',
+//         email: 'shereeanthony@kog.com',
+//         eyeColor: 'brown',
+//         friends: ['Goldie Gentry', 'Briana Decker'],
+//         isActive: true,
+//         balance: 2764,
+//         gender: 'female',
+//       },
+//     ],
+//     'shereeanthony@kog.com'
+//   )
+// );
 
 // ! МЕТОДИ evry, some i reduce
 
 // ? Метод every
 
+// [1, 2, 3, 4, 5].every(value => value >= 0);
+// console.log([1, 2, 3, 4, 5].every(value => value >= 0));
+
+// [1, 2, 3, -10, 4, 5].every(value => value >= 0);
+// console.log([1, 2, 3, -10, 4, 5].every(value => value >= 0));
+
+// const products = [
+//   { name: 'apple', quantity: 2 },
+//   { name: 'orange', quantity: 5 },
+//   { name: 'plum', quantity: 0 },
+// ];
+
+// const hasEveryProduct = products.every(product => product.quantity > 0);
+// console.log(hasEveryProduct);
+
 // * Завдання
+
+// Доповни функцію isEveryUserActive(users) таким чином, щоб вона
+// перевіряла, чи всі користувачі зараз активні (властивість isActive)
+// і повертала true або false.
+
+// const isEveryUserActive = users => {
+//   return users.every(user => user.isActive);
+// };
+
+// console.log(
+//   isEveryUserActive([
+//     {
+//       name: 'Moore Hensley',
+//       email: 'moorehensley@indexia.com',
+//       eyeColor: 'blue',
+//       friends: ['Sharron Pace'],
+//       isActive: false,
+//       balance: 2811,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Sharlene Bush',
+//       email: 'sharlenebush@tubesys.com',
+//       eyeColor: 'blue',
+//       friends: ['Briana Decker', 'Sharron Pace'],
+//       isActive: true,
+//       balance: 3821,
+//       gender: 'female',
+//     },
+//     {
+//       name: 'Ross Vazquez',
+//       email: 'rossvazquez@xinware.com',
+//       eyeColor: 'green',
+//       friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//       isActive: false,
+//       balance: 3793,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Elma Head',
+//       email: 'elmahead@omatom.com',
+//       eyeColor: 'green',
+//       friends: ['Goldie Gentry', 'Aisha Tran'],
+//       isActive: true,
+//       balance: 2278,
+//       gender: 'female',
+//     },
+//     {
+//       name: 'Carey Barr',
+//       email: 'careybarr@nurali.com',
+//       eyeColor: 'blue',
+//       friends: ['Jordan Sampson', 'Eddie Strong'],
+//       isActive: true,
+//       balance: 3951,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Blackburn Dotson',
+//       email: 'blackburndotson@furnigeer.com',
+//       eyeColor: 'brown',
+//       friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//       isActive: false,
+//       balance: 1498,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Sheree Anthony',
+//       email: 'shereeanthony@kog.com',
+//       eyeColor: 'brown',
+//       friends: ['Goldie Gentry', 'Briana Decker'],
+//       isActive: true,
+//       balance: 2764,
+//       gender: 'female',
+//     },
+//   ])
+// );
+
+// ? Метод some()
+
+// console.log([1, 2, 3, 4, 5].some(value => value >= 0));
+// console.log([-7, -20, 3, -10, -14].some(value => value >= 0));
+// console.log([1, 2, 3, 4, 5].some(value => value < 0));
+// console.log([1, 2, 3, -10, 4, 5].some(value => value < 0));
+
+// * Завдання
+
+// Доповни функцію isAnyUserActive(users) таким чином, щоб вона
+// перевіряла наявність хоча б одного активного користувача
+// (властивість isActive) і повертала true або false.
+
+// const isAnyUserActive = users => {
+//   return users.some(user => user.isActive);
+// };
+
+// console.log(
+//   isAnyUserActive([
+//     {
+//       name: 'Moore Hensley',
+//       email: 'moorehensley@indexia.com',
+//       eyeColor: 'blue',
+//       friends: ['Sharron Pace'],
+//       isActive: false,
+//       balance: 2811,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Sharlene Bush',
+//       email: 'sharlenebush@tubesys.com',
+//       eyeColor: 'blue',
+//       friends: ['Briana Decker', 'Sharron Pace'],
+//       isActive: true,
+//       balance: 3821,
+//       gender: 'female',
+//     },
+//     {
+//       name: 'Ross Vazquez',
+//       email: 'rossvazquez@xinware.com',
+//       eyeColor: 'green',
+//       friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//       isActive: false,
+//       balance: 3793,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Elma Head',
+//       email: 'elmahead@omatom.com',
+//       eyeColor: 'green',
+//       friends: ['Goldie Gentry', 'Aisha Tran'],
+//       isActive: true,
+//       balance: 2278,
+//       gender: 'female',
+//     },
+//     {
+//       name: 'Carey Barr',
+//       email: 'careybarr@nurali.com',
+//       eyeColor: 'blue',
+//       friends: ['Jordan Sampson', 'Eddie Strong'],
+//       isActive: true,
+//       balance: 3951,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Blackburn Dotson',
+//       email: 'blackburndotson@furnigeer.com',
+//       eyeColor: 'brown',
+//       friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//       isActive: false,
+//       balance: 1498,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Sheree Anthony',
+//       email: 'shereeanthony@kog.com',
+//       eyeColor: 'brown',
+//       friends: ['Goldie Gentry', 'Briana Decker'],
+//       isActive: true,
+//       balance: 2764,
+//       gender: 'female',
+//     },
+//   ])
+// );
+
+// ? Метод reduce() і масив об'єктів
+
+// const students = [
+//   { name: 'Mango', score: 83 },
+//   { name: 'Poly', score: 59 },
+//   { name: 'Ajax', score: 37 },
+//   { name: 'Kiwi', score: 94 },
+//   { name: 'Houston', score: 64 },
+// ];
+
+// const totalScore = students.reduce((total, student) => {
+//   return total + student.score;
+// }, 0);
+
+// const averageScore = totalScore / students.length;
+
+// console.log(averageScore);
+
+// * Завдання
+
+// У змінній players зберігається масив об'єктів, кожен з яких
+// має властивості name, playtime та gamesPlayed.
+// Нашому сервісу необхідно розрахувати середній час, проведений
+// в одній грі для кожного гравця, і отримати загальну суму цих
+// значень часу у змінній totalAveragePlaytimePerGame. Розрахувати
+// час для кожного з гравців можна, розділивши його час (властивість
+// playtime) на кількість ігор (властивість gamesPlayed).
+
+// Поради
+// Використовуй метод reduce() для ітерації по масиву players та
+// обчислення загальної суми середнього часу на одну гру.
+
+// Усередині колбек функції reduce(), поділи playtime гравця
+// на gamesPlayed, щоб отримати середній час, витрачений на одну
+// гру кожним гравцем.
+
+// Накопичуй результат у змінній acc і повертай його в кінці
+// кожної ітерації.
+
+// Ініціалізуй параметр acc методу reduce() початковим значенням 0,
+// щоб уникнути отримання NaN при виконанні обчислень.
+
+// В результаті змінна totalAveragePlaytimePerGame міститиме загальну
+// суму середнього часу на одну гру для всіх гравців.
+
+// const players = [
+//   { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+//   { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+//   { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+//   { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+// ];
+
+// const totalAveragePlaytimePerGame = players.reduce((acc, player) => {
+//   return (acc += player.playtime / player.gamesPlayed);
+// }, 0);
+
+// console.log(totalAveragePlaytimePerGame);
+
+// * Завдання
+
+// Доповни функцію calculateTotalBalance(users) таким чином, щоб вона
+// рахувала і повертала суму всіх коштів (властивість balance), які
+// зберігають користувачі з масиву users.
+
+// const calculateTotalBalance = users => {
+//   return users.reduce((total, user) => {
+//     return total + user.balance;
+//   }, 0);
+// };
+
+// console.log(
+//   calculateTotalBalance([
+//     {
+//       name: 'Moore Hensley',
+//       email: 'moorehensley@indexia.com',
+//       eyeColor: 'blue',
+//       friends: ['Sharron Pace'],
+//       isActive: false,
+//       balance: 2811,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Sharlene Bush',
+//       email: 'sharlenebush@tubesys.com',
+//       eyeColor: 'blue',
+//       friends: ['Briana Decker', 'Sharron Pace'],
+//       isActive: true,
+//       balance: 3821,
+//       gender: 'female',
+//     },
+//     {
+//       name: 'Ross Vazquez',
+//       email: 'rossvazquez@xinware.com',
+//       eyeColor: 'green',
+//       friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//       isActive: false,
+//       balance: 3793,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Elma Head',
+//       email: 'elmahead@omatom.com',
+//       eyeColor: 'green',
+//       friends: ['Goldie Gentry', 'Aisha Tran'],
+//       isActive: true,
+//       balance: 2278,
+//       gender: 'female',
+//     },
+//     {
+//       name: 'Carey Barr',
+//       email: 'careybarr@nurali.com',
+//       eyeColor: 'blue',
+//       friends: ['Jordan Sampson', 'Eddie Strong'],
+//       isActive: true,
+//       balance: 3951,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Blackburn Dotson',
+//       email: 'blackburndotson@furnigeer.com',
+//       eyeColor: 'brown',
+//       friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//       isActive: false,
+//       balance: 1498,
+//       gender: 'male',
+//     },
+//     {
+//       name: 'Sheree Anthony',
+//       email: 'shereeanthony@kog.com',
+//       eyeColor: 'brown',
+//       friends: ['Goldie Gentry', 'Briana Decker'],
+//       isActive: true,
+//       balance: 2764,
+//       gender: 'female',
+//     },
+//   ])
+// );
+
+// ! Метод toSorted
+
+// ? Масив чисел
+
+// const scores = [61, 19, 74, 35, 92, 56];
+// const ascendingScores = scores.toSorted();
+
+// console.log(scores);
+// console.log(ascendingScores);
+
+// const scores = [27, 2, 41, 4, 7, 3, 75];
+
+// console.log(scores.toSorted());
+
+// ? Масив рядків
+
+// const students = ['Jacob', 'Artemis', 'Solomon', 'Adrian', 'Kai', 'Ganymede'];
+
+// console.log(students.toSorted());
+
+// const letters = ['b', 'B', 'a', 'A', 'c', 'C'];
+
+// console.log(letters.toSorted());
+
+// ? Сортування за зростанням
+
+// const scores = [61, 19, 74, 35, 92, 56];
+// const ascendingScores = scores.toSorted((a, b) => a - b);
+// console.log(ascendingScores);
+
+// ? Сортування за спаданням
+
+// const scores = [61, 6, 65, 19, 74, 35, 3, 39, 92, 56];
+// const descendingScores = scores.toSorted((a, b) => b - a);
+// console.log(descendingScores);
+
+// * Завдання
+
+// Змінна releaseDates - це масив чисел, років видання книг.
+// Онлайн бібліотеці необхідно відображати книги, відсортовані
+// за датою видання, за їх зростанням або спаданням. Доповни код
+// таким чином, щоб у змінній ascendingReleaseDates вийшла копія
+// масиву releaseDates, відсортована за зростанням, а у змінній
+// descendingReleaseDates - копія, відсортована за спаданням.
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+
+// const ascendingReleaseDates = releaseDates.toSorted((a, b) => a - b);
+
+// const descendingReleaseDates = releaseDates.toSorted((a, b) => b - a);
+
+// console.log(ascendingReleaseDates);
+// console.log(descendingReleaseDates);
+
+// ? Свій порядок сортування
+
+// const students = ['Jacob', 'Artemis', 'Solomon', 'Adrian', 'Kai', 'Ganymede'];
+
+// const inAlphabetOrder = students.toSorted((a, b) => a.localeCompare(b));
+// console.log(inAlphabetOrder);
+
+// const inReversedOrder = students.toSorted((a, b) => b.localeCompare(a));
+// console.log(inReversedOrder);
+
+// * Завдання
+
+// Змінна authors - це масив рядків, авторів книг.
+// Онлайн бібліотеці необхідно відображати книги, відсортовані
+// за автором в алфавітному і в зворотному алфавітному порядку.
+// Доповни код таким чином, щоб у змінній authorsInAlphabetOrder
+// вийшла копія масиву authors, відсортована за алфавітом, а у змінній
+// authorsInReversedOrder - копія, відсортована у зворотному
+// алфавітному порядку.
+
+// const authors = [
+//   'Tanith Lee',
+//   'Bernard Cornwell',
+//   'Robert Sheckley',
+//   'Fyodor Dostoevsky',
+//   'Howard Lovecraft',
+// ];
+
+// const authorsInAlphabetOrder = authors.toSorted((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = authors.toSorted((a, b) => b.localeCompare(a));
+
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+
+// ? Сортування об'єктів
+
+// const students = [
+//   { name: 'Mango', score: 83 },
+//   { name: 'Poly', score: 59 },
+//   { name: 'Ajax', score: 37 },
+//   { name: 'Kiwi', score: 94 },
+// ];
+
+// const inAscendingScoreOrder = students.toSorted(
+//   (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
+// );
+
+// console.log(inAscendingScoreOrder);
+
+// const inDescendingScoreOrder = students.toSorted(
+//   (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+// );
+// console.log(inDescendingScoreOrder);
+
+// const inAlphabeticalOrder = students.toSorted((firstStudent, secondStudent) =>
+//   firstStudent.name.localeCompare(secondStudent.name)
+// );
+// console.log(inAlphabeticalOrder);
+
+// * Завдання
+
+// Масив books містить масив об'єктів книг, кожен з яких містить
+// властивості title, author, rating.
+// Доповни код таким чином, щоб:
+// У змінній sortedByAuthorName вийшов масив книг, відсортований
+// за ім'ям автора в алфавітному порядку.
+// У змінній sortedByReversedAuthorName вийшов масив книг,
+// відсортований за ім'ям автора у зворотному алфавітному порядку.
+// У змінній sortedByAscendingRating вийшов масив книг, відсортований
+// за зростанням рейтингу.
+// У змінній sortedByDescentingRating вийшов масив книг, відсортований
+// за спаданням рейтингу.
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   {
+//     title: 'Redder Than Blood',
+//     author: 'Tanith Lee',
+//     rating: 7.94,
+//   },
+//   {
+//     title: 'Enemy of God',
+//     author: 'Bernard Cornwell',
+//     rating: 8.67,
+//   },
+// ];
+
+// const sortedByAuthorName = books.toSorted((firstBook, secondBook) =>
+//   firstBook.author.localeCompare(secondBook.author)
+// );
+// console.log(sortedByAuthorName);
+// const sortedByReversedAuthorName = books.toSorted((firstBook, secondBook) =>
+//   secondBook.author.localeCompare(firstBook.author)
+// );
+// console.log(sortedByReversedAuthorName);
+// const sortedByAscendingRating = books.toSorted(
+//   (firstBook, secondBook) => firstBook.rating - secondBook.rating
+// );
+// console.log(sortedByAscendingRating);
+// const sortedByDescentingRating = books.toSorted(
+//   (firstBook, secondBook) => secondBook.rating - firstBook.rating
+// );
+// console.log(sortedByDescentingRating);
+
+// * Завдання
+
+// Масив books містить масив об'єктів книг, кожен з яких містить властивості
+// title, author, rating.
+//Доповни код таким чином, щоб у змінній names вийшов масив імен авторів
+// в алфавітному порядку, рейтинг книг яких більший за значення змінної
+// MIN_BOOK_RATING. Використовуй ланцюжок методів.
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   {
+//     title: 'The Dreams in the Witch House',
+//     author: 'Howard Lovecraft',
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+
+// const names = books
+//   .filter(book => book.rating > MIN_BOOK_RATING)
+//   .map(book => book.author)
+//   .toSorted((first, second) => first.localeCompare(second));
+
+// console.log(names);
