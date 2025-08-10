@@ -1,6 +1,6 @@
 // ! КОНТЕКСТ ВИКОНАННЯ ФУНКЦІЇ
 
-// ? Коючове слово this
+// ? Ключове слово this
 
 // * Завдання
 
@@ -368,3 +368,811 @@
 // objA.a = 'objA prop';
 
 // console.log(objA);
+
+// ! ООП
+
+// ? Процедурне програмування
+
+// const baseSalary = 30000;
+// const overtime = 10;
+// const rate = 20;
+
+// const getWage = (baseSalary, overtime, rate) => {
+//   return baseSalary + overtime * rate;
+// };
+
+// console.log(getWage(baseSalary, overtime, rate));
+
+// ? Об'єкто-орієнтоване програмування
+
+// const employee = {
+//   baseSalary: 30000,
+//   overtime: 10,
+//   rate: 20,
+//   getWage() {
+//     return this.baseSalary + this.overtime * this.rate;
+//   },
+// };
+
+// console.log(employee.getWage());
+
+// ! КЛАСИ
+
+// ? Оголошення класу
+
+// class User {}
+
+// const mango = new User();
+// console.log(mango);
+
+// const poly = new User();
+// console.log(poly);
+
+// ? Конструктор класу
+
+// class User {
+//   constructor() {}
+// }
+
+// console.log(User);
+
+// class User {
+//   constructor() {
+//     console.log('constructor call');
+//   }
+// }
+
+// const mango = new User();
+// console.log(mango);
+
+// class User {
+//   constructor(name, email) {
+//     console.log(name, email);
+//   }
+// }
+
+// const mango = new User('Mango', 'mango@mail.com');
+// console.log(mango);
+
+// * Завдання
+
+// Додай класу Car метод constructor, який приймає три параметри:
+// brand - марка автомобіля
+// model - модель автомобіля
+// price - ціна автомобіля
+// Клас Car повинен створювати об'єкт з одноіменними властивостями
+// brand, model і price, які отримують свої значення з аргументів,
+// переданих при створенні нового екземпляра за допомогою оператора new.
+
+// class Car {
+//   constructor(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+// }
+
+// console.log(new Car('Audi', 'Q3', 36000));
+// console.log(new Car('BMW', 'X5', 58900));
+// console.log(new Car('Nissan', 'Murano', 31700));
+
+// ? Об'єкт параметрів
+
+// class User {
+//   constructor(params) {
+//     this.name = params.name;
+//     this.email = params.email;
+//   }
+// }
+
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+// });
+
+// console.log(mango);
+
+// * Завдання
+
+// Виконай рефакторинг класу Car таким чином, щоб він приймав
+// один параметр - об'єкт з властивостями brand, model і price.
+
+// class Car {
+//   constructor(params) {
+//     this.brand = params.brand;
+//     this.model = params.model;
+//     this.price = params.price;
+//   }
+// }
+
+// console.log(new Car({ brand: 'Audi', model: 'Q3', price: 36000 }));
+// console.log(new Car({ brand: 'BMW', model: 'X5', price: 58900 }));
+// console.log(new Car({ brand: 'Nissan', model: 'Murano', price: 31700 }));
+
+// ? Методи класу
+
+// class User {
+//   constructor(params) {
+//     this.name = params.name;
+//     this.email = params.email;
+//   }
+
+//   getEmail() {}
+
+//   changeEmail(newEmail) {}
+// }
+
+// class User {
+//   constructor(params) {
+//     this.name = params.name;
+//     this.email = params.email;
+//   }
+
+//   getEmail() {
+//     return this.email;
+//   }
+
+//   changeEmail(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+// });
+
+// console.log(mango.getEmail());
+
+// mango.changeEmail('new@mail.com');
+
+// console.log(mango.getEmail());
+
+// *Завдання
+
+// Додай класу Car два методи.
+// getPrice() - повертає значення властивості price з об'єкта,
+// який буде його викликати.
+// changePrice(newPrice) - оновлює значення властивості price в
+// об'єкта, який буде його викликати на значення параметра newPrice.
+
+// class Car {
+//   constructor(params) {
+//     this.brand = params.brand;
+//     this.model = params.model;
+//     this.price = params.price;
+//   }
+
+//   getPrice() {
+//     return this.price;
+//   }
+
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//   }
+// }
+
+// ? Прототип екземпляру
+
+// class User {
+//   constructor(params) {
+//     this.name = params.name;
+//     this.email = params.email;
+//   }
+
+//   getEmail() {
+//     return this.email;
+//   }
+
+//   changeEmail(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+// });
+
+// console.log(mango.getEmail());
+// console.log(mango);
+
+// ? Приватні властивості
+
+// class User {
+//   name;
+//   #email;
+
+//   constructor(params) {
+//     this.name = params.name;
+//     this.#email = params.email;
+//   }
+// }
+
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+// });
+
+// console.log(mango.name);
+// console.log(mango.#email);
+
+// class User {
+//   name;
+//   #email;
+
+//   constructor(params) {
+//     this.name = params.name;
+//     this.#email = params.email;
+//   }
+
+//   getEmail() {
+//     return this.#email;
+//   }
+
+//   changeEmail(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+// });
+
+// console.log(mango.getEmail());
+// mango.changeEmail('mango@supermail.com');
+// console.log(mango.getEmail());
+
+// * Завдання
+
+// Виконай рефакторинг класу Car таким чином, щоб властивість brand
+// була приватною, і додай два методи для публічного інтерфейсу, для
+// читання і зміни цієї властивості.
+
+// getBrand() - повертає значення приватної властивості brand.
+// changeBrand(newBrand) - змінює значення приватної властивості
+// brand на newBrand.
+
+// class Car {
+//   #brand;
+//   constructor(params) {
+//     this.#brand = params.brand;
+//     this.model = params.model;
+//     this.price = params.price;
+//   }
+//   getPrice() {
+//     return this.price;
+//   }
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//   }
+//   getBrand() {
+//     return this.#brand;
+//   }
+//   changeBrans(newBrand) {
+//     this.#brand = newBrand;
+//   }
+// }
+
+// console.log(new Car({ brand: 'Audi', model: 'Q3', price: 36000 }));
+// console.log(new Car({ brand: 'bmw', model: 'X5', price: 58900 }));
+// console.log(new Car({ brand: 'Nissan', model: 'Murano', price: 31700 }));
+
+// const newCar = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
+// console.log(newCar);
+// console.log(Object.values(newCar));
+
+// ? Приватні методи
+
+// class User {
+//   name;
+//   #email;
+
+//   constructor(params) {
+//     this.name = params.name;
+//     this.#email = params.email;
+//   }
+
+//   getEmail() {
+//     return this.#email;
+//   }
+
+//   changeEmail(newEmail) {
+//     if (this.#validateEmail(newEmail)) {
+//       this.#email = newEmail;
+//     } else {
+//       console.log('Invalid email format');
+//     }
+//   }
+
+//   #validateEmail(email) {
+//     return email.includes('@');
+//   }
+// }
+
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+// });
+
+// mango.changeEmail('newmail.com');
+// mango.changeEmail('new@mail.com');
+// console.log(mango.getEmail());
+
+// ? Геттери і сеттери
+
+// class User {
+//   #email;
+
+//   constructor(params) {
+//     this.name = params.name;
+//     this.#email = params.email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+// });
+
+// console.log(mango.email);
+// mango.email = 'mango@supermail.com';
+// console.log(mango.email);
+
+// class User {
+//   #email;
+
+//   constructor(params) {
+//     this.name = params.name;
+//     this.#email = params.email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     if (newEmail === '') {
+//       console.log('Помилка! Пошта не може бути порожнім рядком!');
+//       return;
+//     }
+//     this.#email = newEmail;
+//   }
+// }
+
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+// });
+
+// console.log(mango.email);
+// mango.email = '';
+// console.log(mango.email);
+
+// * Завдання
+
+// Виконай рефакторинг класу Car. Додатково до приватної властивості
+// #brand зроби приватними властивості model і price. Стандартизуй
+// публічний інтерфейс класу, замінивши вже оголошені методи на геттери
+// та сеттери brand, model і price, для взаємодії з приватними
+// властивостями.
+
+// class Car {
+//   #brand;
+//   #model;
+//   #price;
+
+//   constructor(params) {
+//     this.#brand = params.brand;
+//     this.#model = params.model;
+//     this.#price = params.price;
+//   }
+
+//   get brand() {
+//     return this.#brand;
+//   }
+
+//   set brand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+
+//   get model() {
+//     return this.#model;
+//   }
+
+//   set model(newModel) {
+//     this.#model = newModel;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     this.#price = newPrice;
+//   }
+// }
+
+// ? Статичні властивості
+
+// class MyClass {
+//   static myProp = 'value';
+// }
+
+// console.log(MyClass.myProp);
+
+// class MyClass {
+//   static myProp = 'value';
+// }
+
+// const inst = new MyClass();
+// console.log(inst.myProp);
+
+// class User {
+//   static roles = {
+//     admin: 'admin',
+//     editor: 'editor',
+//     basic: 'basic',
+//   };
+//   #email;
+//   #role;
+
+//   constructor(params) {
+//     this.#email = params.email;
+//     this.#role = params.role || User.roles.basic;
+//   }
+
+//   get role() {
+//     return this.#role;
+//   }
+
+//   set role(newRole) {
+//     this.#role = newRole;
+//   }
+// }
+
+// const mango = new User({
+//   email: 'mango@mail.com',
+//   role: User.roles.admin,
+// });
+
+// console.log(mango.role);
+// mango.role = User.roles.editor;
+// console.log(mango.role);
+
+// * Завдання
+
+// Виконай рефакторинг класу Car. Додай публічну статичну властивість
+// maxPrice зі значенням число 50000 - максимально допустима ціна
+// автомобіля.
+// Додай сеттеру price перевірку значення параметра newPrice,
+// що передається. Якщо воно більше за maxPrice, сеттер нічого не
+// робить, а якщо менше або дорівнює, то перезаписує ціну автомобіля.
+// Під оголошенням класу ми додали ініціалізації екземплярів і виклики
+// методів, щоб показати, як будуть використовуватися геттери і сеттери
+// price.
+
+// class Car {
+//   static maxPrice = 50000;
+//   #price;
+
+//   constructor(params) {
+//     this.#price = params.price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     if (newPrice <= Car.maxPrice) {
+//       return (this.#price = newPrice);
+//     }
+//   }
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price);
+
+// audi.price = 49000;
+// console.log(audi.price);
+
+// audi.price = 51000;
+// console.log(audi.price);
+
+// ? Статичні методи
+
+// class User {
+//   static #takenEmails = [];
+
+//   static isEmailTaken(email) {
+//     return User.#takenEmails.includes(email);
+//   }
+
+//   #email;
+
+//   constructor(params) {
+//     this.#email = params.email;
+//     User.#takenEmails.push(params.email);
+//   }
+// }
+
+// const mango = new User({ email: 'mango@mail.com' });
+
+// console.log(User.isEmailTaken('poly@mail.com'));
+// console.log(User.isEmailTaken('mango@mail.com'));
+
+// * Завдання
+
+// Додай класу Car публічний статичний метод checkPrice(price), що
+// приймає ціну автомобіля. Метод повинен порівняти значення параметра
+// price і приватної статичної властивості maxPrice.
+
+// Якщо ціна автомобіля перевищує максимальну, метод повинен повернути
+// рядок "Error! Price exceeds the maximum".
+// В іншому випадку метод повинен повернути рядок "Success! Price is
+// within acceptable limits".
+// Під оголошенням класу ми додали ініціалізацію екземпляра і виклики
+// методів, щоб показати, як буде використовуватися метод checkPrice(price).
+
+// class Car {
+//   static #maxPrice = 50000;
+
+//   constructor(params) {
+//     this.price = params.price;
+//   }
+//   static checkPrice(price) {
+//     if (price > Car.#maxPrice) {
+//       return 'Error! Price exceeds the maximum';
+//     }
+//     return 'Success! Price is within acceptable limits';
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price));
+// console.log(Car.checkPrice(bmw.price));
+
+// ? Наслідування класів
+
+// class User {
+//   #email;
+
+//   constructor(email) {
+//     this.#email = email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// class ContentEditor extends User {
+//   // body
+// }
+
+// const editor = new ContentEditor('mango@mail.com');
+// console.log(editor);
+// console.log(editor.email);
+
+// * Завдання
+
+// У застосунку потрібен адміністратор з можливістю додавати пошти
+// користувачів у чорний список.
+// Оголоси клас Admin, який наслідує від класу User
+// Додай класу Admin публічну статичну властивість role (рівень доступу),
+// значення якої — це об'єкт {BASIC: "basic", SUPERUSER: "superuser"}
+
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = { BASIC: 'basic', SUPERUSER: 'superuser' };
+//   constructor(params) {}
+// }
+
+// console.log(Admin.role.BASIC);
+// console.log(Admin.role.SUPERUSER);
+
+// ? Конструктор дочірнього класу
+
+// class User {
+//   #email;
+
+//   constructor(email) {
+//     this.#email = email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// class ContentEditor extends User {
+//   constructor(params) {
+//     super(params.email);
+
+//     this.posts = params.posts;
+//   }
+// }
+
+// const editor = new ContentEditor({
+//   email: 'mango@mail.com',
+//   posts: [],
+// });
+
+// console.log(editor);
+// console.log(editor.email);
+
+// * Завдання
+
+// Додай класу Admin метод constructor, який приймає один параметр
+// params- об'єкт налаштувань з двома властивостями email і access.
+// Додай класу Admin публічну властивість access, значення якої буде
+// передаватися під час виклику конструктора.
+
+// Щоб показати, як буде використовуватися клас Admin, ми додали
+// ініціалізацію екземпляра під оголошенням класу.
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: 'basic',
+//     SUPERUSER: 'superuser',
+//   };
+//   constructor(params) {
+//     super(params.email);
+//     this.access = params.access;
+//   }
+// }
+
+// const mango = new Admin({
+//   email: 'mango@mail.com',
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email);
+// console.log(mango.access);
+
+// ? Методи дочірнього класу
+
+// class User {
+//   #email;
+
+//   constructor(email) {
+//     this.#email = email;
+//   }
+// }
+
+// class ContentEditor extends User {
+//   constructor(params) {
+//     super(params.email);
+//     this.posts = params.posts;
+//   }
+
+//   addPost(post) {
+//     this.posts.push(post);
+//   }
+// }
+
+// const editor = new ContentEditor({
+//   email: 'mango@mail.com',
+//   posts: [],
+// });
+
+// console.log(editor);
+
+// editor.addPost('post-1');
+// editor.addPost('post-2');
+// console.log(editor.posts);
+
+// * Завдання
+
+// Додай класу Admin наступні властивості і методи.
+// Публічну властивість blacklistedEmails для зберігання чорного
+// списку поштових адрес користувачів. Значення за замовчуванням — це
+// порожній масив.
+// Публічний метод blacklist(email) для додавання пошти у чорний список.
+// Метод повинен додавати значення параметра email в масив, що зберігається
+// у властивості blacklistedEmails.
+// Публічний метод isBlacklisted(email) для перевірки пошти у чорному
+// списку. Метод повинен перевіряти наявність значення параметра email
+// в масиві, що зберігається у властивості blacklistedEmails, і повертати
+// true або false.
+// Після оголошення класу ми додали ініціалізацію екземпляра і виклики
+// методів у тій послідовності, в якій твій код перевірятимуть тести. Будь ласка, нічого там не змінюй.
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// class Admin extends User {
+//   static role = {
+//     BASIC: 'basic',
+//     SUPERUSER: 'superuser',
+//   };
+
+//   blacklistedEmails = [];
+
+//   constructor(params) {
+//     super(params.email);
+//     this.access = params.access;
+//   }
+
+//   blacklist(email) {
+//     this.blacklistedEmails.push(email);
+//   }
+
+//   isBlacklisted(email) {
+//     return this.blacklistedEmails.includes(email);
+//   }
+// }
+
+// const mango = new Admin({
+//   email: 'mango@mail.com',
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// mango.blacklist('poly@mail.com');
+// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted('mango@mail.com')); // false
+// console.log(mango.isBlacklisted('poly@mail.com')); // true
