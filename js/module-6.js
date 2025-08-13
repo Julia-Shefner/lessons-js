@@ -1176,3 +1176,89 @@
 // console.log(mango.blacklistedEmails); // ["poly@mail.com"]
 // console.log(mango.isBlacklisted('mango@mail.com')); // false
 // console.log(mango.isBlacklisted('poly@mail.com')); // true
+
+// ? Друга лекція
+
+// class Car {
+//   constructor(brand, model) {
+//     this.brand = brand;
+//     this.model = model;
+//   }
+// }
+
+// const bmw = new Car('bmw', 'x7');
+// const audi = new Car('audi', 'q7');
+
+// console.log('bmw', bmw);
+// console.log('audi', audi);
+
+// class Car {
+//   constructor(brand, model) {
+//     this.brand = brand;
+//     this.model = model;
+//   }
+//   getModel() {
+//     return this.model;
+//   }
+//   changeModel(newModel) {
+//     this.model = newModel;
+//   }
+// }
+
+// const bmw = new Car('bmw', 'x7');
+// const audi = new Car('audi', 'q7');
+
+// bmw.changeModel('x3');
+// console.log(bmw.getModel);
+// console.log('bmw', bmw);
+// console.log('audi', audi);
+
+// class Car {
+//   #price;
+//   constructor(obj) {
+//     this.brand = obj.brand;
+//     this.model = obj.model;
+//     this.#price = obj.price;
+//   }
+//   getModel() {
+//     return this.model;
+//   }
+//   changeModel(newModel) {
+//     this.model = newModel;
+//   }
+//   getPrice() {
+//     return this.#price;
+//   }
+//   changePrice(newPrice) {
+//     return (this.#price = newPrice);
+//   }
+// }
+
+// const bmw = new Car({ brand: 'bmw', model: 'x5', price: 70000 });
+
+// console.log('bmw', bmw);
+// console.log(bmw.getPrice());
+// console.log(bmw.changePrice(80000));
+
+// class Hero {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   sayHello() {
+//     console.log('Hello');
+//   }
+// }
+
+// class Paladin extends Hero {
+//   constructor(name, weapon) {
+//     super(name);
+//     this.weapon = weapon;
+//   }
+// }
+
+// const arthas = new Paladin('Arthas', 'sword');
+// console.log(arthas);
+// arthas.sayHello();
+
+// const lalala = new Hero('Petya');
+// console.log(lalala);
